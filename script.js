@@ -1,18 +1,36 @@
-// JavaScript functionality for the chat-based website builder homepage
+// smooth scrolling function
+function smoothScroll(target) {
+    const element = document.querySelector(target);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+}
 
-document.addEventListener('DOMContentLoaded', function() {
-    const chatInput = document.getElementById('chat-input');
-    const chatButton = document.getElementById('chat-button');
-    const chatArea = document.getElementById('chat-area');
-
-    chatButton.addEventListener('click', function() {
-        const userMessage = chatInput.value;
-        if (userMessage.trim() !== '') {
-            const messageElement = document.createElement('div');
-            messageElement.classList.add('message');
-            messageElement.textContent = userMessage;
-            chatArea.appendChild(messageElement);
-            chatInput.value = '';  // Clear input after sending
-        }
+// animations for elements
+function animateElements() {
+    const elements = document.querySelectorAll('.animate');
+    elements.forEach((element) => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+        observer.observe(element);
     });
+}
+
+// chat interactions
+const chatButton = document.querySelector('#chat-button');
+const chatWindow = document.querySelector('#chat-window');
+
+chatButton.addEventListener('click', () => {
+    chatWindow.classList.toggle('visible');
+});
+
+// Initialize functions
+document.addEventListener('DOMContentLoaded', () => {
+    animateElements();
 });
