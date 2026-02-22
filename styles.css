@@ -1,104 +1,242 @@
 :root {
-    --primary-color: #4CAF50;
-    --secondary-color: #f44336;
-    --background-color: #f4f4f4;
-    --text-color: #333;
-    --font-family: 'Arial', sans-serif;
+    --bg: #0b1020;
+    --surface: #111a33;
+    --surface-alt: #1a2750;
+    --text: #e7ecff;
+    --muted: #b6c0e5;
+    --brand: #6f8cff;
+    --brand-2: #53d8fb;
+    --success: #3ddc97;
+    --border: rgba(255, 255, 255, 0.12);
+    --shadow: 0 20px 45px rgba(7, 11, 24, 0.45);
+    --radius: 16px;
 }
 
-/* Navbar */
-.navbar {
-    background-color: var(--primary-color);
-    padding: 10px;
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at 20% 0%, #253568 0%, transparent 45%),
+        radial-gradient(circle at 90% 10%, #14305a 0%, transparent 30%),
+        var(--bg);
+    line-height: 1.6;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
+    padding: 1rem 4vw;
+    backdrop-filter: blur(8px);
+    background: rgba(11, 16, 32, 0.75);
+    border-bottom: 1px solid var(--border);
 }
 
-.navbar a {
-    color: white;
+nav h1 {
+    margin: 0;
+    font-size: 1.1rem;
+    letter-spacing: 0.04em;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+nav a {
+    color: var(--muted);
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    transition: 0.2s ease;
 }
 
-/* Buttons */
-.btn {
-    background-color: var(--secondary-color);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+nav a:hover,
+nav a:focus-visible {
+    color: var(--text);
+    background: rgba(111, 140, 255, 0.2);
 }
 
-/* Hero Section */
-.hero {
-    background: url('hero-image.jpg') no-repeat center center;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+header,
+section {
+    width: min(1100px, 92vw);
+    margin: 1.25rem auto;
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: linear-gradient(170deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+    box-shadow: var(--shadow);
 }
 
-/* Features */
-.features {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
+header {
+    min-height: 280px;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    background:
+        linear-gradient(135deg, rgba(111, 140, 255, 0.24), rgba(83, 216, 251, 0.16)),
+        linear-gradient(170deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+}
+
+h2 {
+    margin: 0 0 0.45rem;
+    font-size: clamp(1.4rem, 2.2vw, 2rem);
+}
+
+p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.features-grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
 }
 
 .feature {
-    background-color: white;
-    border: 1px solid var(--primary-color);
-    padding: 20px;
+    padding: 1.25rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: linear-gradient(140deg, rgba(111, 140, 255, 0.16), rgba(83, 216, 251, 0.08));
+    font-weight: 600;
+}
+
+#pricing p {
+    font-size: 1.05rem;
+}
+
+#demo .demo-shell {
+    margin-top: 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    background: var(--surface);
+}
+
+.demo-log {
+    max-height: 220px;
+    overflow-y: auto;
+    padding: 1rem;
+    display: grid;
+    gap: 0.7rem;
+}
+
+.demo-msg {
+    width: fit-content;
+    max-width: 85%;
+    padding: 0.55rem 0.8rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+}
+
+.demo-msg.user {
+    margin-left: auto;
+    background: rgba(111, 140, 255, 0.35);
+}
+
+.demo-msg.bot {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.demo-controls {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.8rem;
+    border-top: 1px solid var(--border);
+    background: var(--surface-alt);
+}
+
+.demo-controls input {
     flex: 1;
-    margin: 10px;
 }
 
-/* How It Works */
-.how-it-works {
-    padding: 20px;
-    background-color: var(--background-color);
+input,
+textarea,
+button {
+    font: inherit;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    padding: 0.7rem 0.85rem;
 }
 
-/* Pricing */
-.pricing {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+input,
+textarea {
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text);
 }
 
-/* Demo Chat */
-.demo-chat {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 20px;
+textarea {
+    min-height: 120px;
+    resize: vertical;
 }
 
-/* Contact Form */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
+form {
+    margin-top: 1rem;
+    display: grid;
+    gap: 0.6rem;
 }
 
-.contact-form input, .contact-form textarea {
-    margin: 10px 0;
-    padding: 10px;
-}
-
-/* Footer */
-.footer {
-    background-color: var(--primary-color);
+button {
+    background: linear-gradient(130deg, var(--brand), var(--brand-2));
     color: white;
-    text-align: center;
-    padding: 10px;
+    border: 0;
+    font-weight: 700;
+    cursor: pointer;
 }
 
-/* Responsive Media Queries */
-@media (max-width: 768px) {
-    .features,
-    .pricing {
+button:hover {
+    filter: brightness(1.06);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 500ms ease, transform 500ms ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#contact .status {
+    color: var(--success);
+    font-weight: 600;
+    min-height: 1.4em;
+}
+
+@media (max-width: 840px) {
+    nav {
+        gap: 0.75rem;
+        align-items: flex-start;
         flex-direction: column;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header,
+    section {
+        padding: 1.25rem;
     }
 }

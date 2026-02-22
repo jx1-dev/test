@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Website Builder Demo</title>
+    <script>
+        const cacheBuster = `v=${Date.now()}`;
+
     <title>Homepage</title>
     <script>
         const cacheBuster = `v=${Date.now()}`;
@@ -10,11 +14,16 @@
         stylesheet.rel = 'stylesheet';
         stylesheet.href = `styles.css?${cacheBuster}`;
         document.head.appendChild(stylesheet);
+
+        const appScript = document.createElement('script');
+        appScript.src = `script.js?${cacheBuster}`;
+        appScript.defer = true;
+        document.head.appendChild(appScript);
     </script>
 </head>
 <body>
     <nav>
-        <h1>Company Name</h1>
+        <h1>SiteSprint AI</h1>
         <ul>
             <li><a href="#hero">Home</a></li>
             <li><a href="#features">Features</a></li>
@@ -24,30 +33,36 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+
     <header id="hero">
-        <h2>Welcome to Our Service</h2>
-        <p>Your tagline goes here.</p>
+        <h2>Build polished websites in minutes</h2>
+        <p>Generate landing pages, tweak styles, and ship faster with an AI co-pilot.</p>
     </header>
+
     <section id="features">
         <h2>Features</h2>
         <div class="features-grid">
-            <div class="feature">Feature 1</div>
-            <div class="feature">Feature 2</div>
-            <div class="feature">Feature 3</div>
+            <div class="feature">AI-generated page sections</div>
+            <div class="feature">Instant design refinements</div>
+            <div class="feature">Responsive layouts by default</div>
         </div>
     </section>
+
     <section id="how-it-works">
         <h2>How It Works</h2>
-        <p>Explain how your service works.</p>
+        <p>Tell the assistant what you want, preview changes instantly, and publish when you're ready.</p>
     </section>
+
     <section id="pricing">
         <h2>Pricing</h2>
-        <p>Provide pricing details here.</p>
+        <p>Start free. Upgrade to Pro for team collaboration, custom domains, and advanced generation limits.</p>
     </section>
+
     <section id="demo">
         <h2>Demo Chat</h2>
-        <p>Interactive demo chat here.</p>
+        <p>Try the interactive assistant below to simulate content generation prompts.</p>
     </section>
+
     <section id="contact">
         <h2>Contact Us</h2>
         <form>
