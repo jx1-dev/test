@@ -3,22 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat-Based Website Builder</title>
+    <title>Homepage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to the Chat-Based Website Builder!</h1>
+    <nav>
+        <h1>Company Name</h1>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#demo">Demo Chat</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <header id="hero">
+        <h2>Welcome to Our Service</h2>
+        <p>Your tagline goes here.</p>
     </header>
-    <main>
-        <section>
-            <p>Start building your website through an interactive chat interface.</p>
-            <p>Get creative, and let us assist you every step of the way!</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Chat-Based Website Builder</p>
-    </footer>
-    <script src="script.js"></script>
+    <section id="features">
+        <h2>Features</h2>
+        <div class="features-grid">
+            <div class="feature">Feature 1</div>
+            <div class="feature">Feature 2</div>
+            <div class="feature">Feature 3</div>
+        </div>
+    </section>
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <p>Explain how your service works.</p>
+    </section>
+    <section id="pricing">
+        <h2>Pricing</h2>
+        <p>Provide pricing details here.</p>
+    </section>
+    <section id="demo">
+        <h2>Demo Chat</h2>
+        <p>Interactive demo chat here.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
 </body>
 </html>
