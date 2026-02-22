@@ -1,38 +1,104 @@
-.chat-homepage {
-    background-color: #f9f9f9;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    color: #333;
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #f44336;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --font-family: 'Arial', sans-serif;
 }
 
-.chat-header {
-    background-color: #4CAF50;
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+/* Buttons */
+.btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero-image.jpg') no-repeat center center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Features */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.feature {
+    background-color: white;
+    border: 1px solid var(--primary-color);
+    padding: 20px;
+    flex: 1;
+    margin: 10px;
+}
+
+/* How It Works */
+.how-it-works {
+    padding: 20px;
+    background-color: var(--background-color);
+}
+
+/* Pricing */
+.pricing {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Demo Chat */
+.demo-chat {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 20px;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 15px;
-    font-size: 24px;
-}
-
-.chat-container {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    max-width: 600px;
-    margin: 20px auto;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.chat-message {
     padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
 }
 
-.chat-message.user {
-    background-color: #e1f5fe;
-    text-align: right;
-}
-
-.chat-message.bot {
-    background-color: #ffe0b2;
-    text-align: left;
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .features,
+    .pricing {
+        flex-direction: column;
+    }
 }
