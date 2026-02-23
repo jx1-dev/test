@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Website Builder Demo</title>
+    <title>SiteSprint AI — Enterprise Web Intelligence Platform</title>
     <script>
         const cacheBuster = `v=${Date.now()}`;
         const stylesheet = document.createElement('link');
@@ -19,56 +19,221 @@
 </head>
 <body>
     <nav>
-        <h1>SiteSprint AI</h1>
+        <h1>SiteSprint <span class="nav-badge">AI</span></h1>
         <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#features">Features</a></li>
+            <li><a href="#hero">Platform</a></li>
+            <li><a href="#features">Capabilities</a></li>
             <li><a href="#how-it-works">How It Works</a></li>
             <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#demo">Demo Chat</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#demo">Live Demo</a></li>
+            <li><a href="#contact">Talk to Sales</a></li>
         </ul>
     </nav>
 
     <header id="hero">
-        <h2>Build strategic, high-converting websites with AI insight</h2>
-        <p>Generate landing pages, tweak styles, and ship faster with an AI co-pilot.</p>
+        <div class="hero-eyebrow">Trusted by 2,400+ enterprise teams</div>
+        <h2>Ship high-converting web experiences<br><span class="gradient-text">10× faster with AI</span></h2>
+        <p>SiteSprint AI is the enterprise web intelligence platform that turns strategic briefs into production-ready pages — complete with brand governance, A/B variant generation, and compliance checks baked in.</p>
+        <div class="hero-actions">
+            <button class="btn-primary">Request a Demo</button>
+            <button class="btn-ghost">View Case Studies ↗</button>
+        </div>
+        <div class="trust-bar">
+            <span class="trust-badge">SOC 2 Type II</span>
+            <span class="trust-badge">GDPR Ready</span>
+            <span class="trust-badge">99.9% SLA</span>
+            <span class="trust-badge">SSO / SAML</span>
+            <span class="trust-badge">HIPAA Option</span>
+        </div>
     </header>
 
-    <section id="features">
-        <h2>Features</h2>
-        <div class="features-grid">
-            <div class="feature">AI-generated page sections</div>
-            <div class="feature">Instant design refinements</div>
-            <div class="feature">Responsive layouts by default</div>
+    <section id="stats" class="reveal">
+        <div class="stats-grid">
+            <div class="stat">
+                <div class="stat-value">10×</div>
+                <div class="stat-label">Faster page production vs. traditional agency workflows</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">38%</div>
+                <div class="stat-label">Average lift in conversion rate across enterprise clients</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">$2.1M</div>
+                <div class="stat-label">Average annual savings in agency & contractor spend</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">4.9 / 5</div>
+                <div class="stat-label">G2 rating from 840+ verified enterprise reviews</div>
+            </div>
         </div>
     </section>
 
-    <section id="how-it-works">
-        <h2>How It Works</h2>
-        <p>Tell the assistant what you want, preview changes instantly, and publish when you're ready.</p>
+    <section id="features" class="reveal">
+        <div class="section-label">Core Capabilities</div>
+        <h2>Built for the complexity of enterprise web</h2>
+        <p>Every feature is designed for teams managing hundreds of pages, multiple brands, and strict governance requirements.</p>
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-icon">&#9670;</div>
+                <div class="feature-title">Brand-Governed Generation</div>
+                <div class="feature-desc">AI constrained by your design tokens, tone-of-voice guidelines, and approved asset libraries — every output is on-brand by default.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#9670;</div>
+                <div class="feature-title">Multi-Variant A/B Scaffolding</div>
+                <div class="feature-desc">Generate statistically distinct page variants in seconds. Integrate directly with Optimizely, LaunchDarkly, or your existing experimentation stack.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#9670;</div>
+                <div class="feature-title">Compliance & Accessibility Audit</div>
+                <div class="feature-desc">Automated WCAG 2.2 AA checks, cookie-consent scaffolding, and legal copy validation run on every generation before publish.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#9670;</div>
+                <div class="feature-title">Role-Based Approval Workflows</div>
+                <div class="feature-desc">Define reviewer chains by region, brand unit, or content type. Nothing reaches production without the right sign-off — with a full audit trail.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#9670;</div>
+                <div class="feature-title">CMS & DAM Integration</div>
+                <div class="feature-desc">Native connectors for Contentful, Sitecore, AEM, Salesforce CMS, and 30+ DAMs. AI pulls live assets and structured content — no copy-paste.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#9670;</div>
+                <div class="feature-title">Conversion Intelligence Layer</div>
+                <div class="feature-desc">Real-time recommendations powered by your first-party analytics — SiteSprint reads session data and suggests layout, CTA, and copy changes with predicted impact.</div>
+            </div>
+        </div>
     </section>
 
-    <section id="pricing">
-        <h2>Pricing</h2>
-        <p>Start free. Upgrade to Pro for team collaboration, custom domains, and advanced generation limits.</p>
+    <section id="how-it-works" class="reveal">
+        <div class="section-label">Process</div>
+        <h2>From brief to production in three steps</h2>
+        <p>SiteSprint replaces multi-week agency cycles with a governed, AI-accelerated workflow your teams actually control.</p>
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">01</div>
+                <div class="step-body">
+                    <div class="step-title">Brief the AI in plain language</div>
+                    <div class="step-desc">Describe your campaign goal, audience segment, and KPIs. SiteSprint cross-references your brand guidelines and historical performance data to frame the right page architecture.</div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">02</div>
+                <div class="step-body">
+                    <div class="step-title">Review, refine, and approve</div>
+                    <div class="step-desc">Generated pages enter your approval workflow. Stakeholders annotate directly on the preview. The AI iterates on feedback in real time — no developer handoff required.</div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">03</div>
+                <div class="step-body">
+                    <div class="step-title">Publish with built-in guardrails</div>
+                    <div class="step-desc">One-click deployment to your CDN or CMS. Post-publish, the Conversion Intelligence Layer monitors performance and surfaces optimisation recommendations continuously.</div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="demo">
-        <h2>Demo Chat</h2>
-        <p>Try the interactive assistant below to simulate content generation prompts.</p>
+    <section id="pricing" class="reveal">
+        <div class="section-label">Pricing</div>
+        <h2>Transparent, scalable enterprise pricing</h2>
+        <p>No per-seat surprises. All plans include SSO, audit logs, and dedicated onboarding.</p>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="plan-name">Growth</div>
+                <div class="plan-price">$1,800<span>/mo</span></div>
+                <div class="plan-sub">Up to 5 brand workspaces · 50 pages/mo</div>
+                <ul class="plan-features">
+                    <li>Brand-governed generation</li>
+                    <li>WCAG 2.2 AA audit</li>
+                    <li>2-stage approval workflow</li>
+                    <li>Contentful &amp; Webflow connectors</li>
+                    <li>Standard SLA (99.5%)</li>
+                    <li>Email support + onboarding call</li>
+                </ul>
+                <button class="btn-outline">Start Trial</button>
+            </div>
+            <div class="pricing-card pricing-featured">
+                <div class="plan-badge">Most Popular</div>
+                <div class="plan-name">Scale</div>
+                <div class="plan-price">$5,400<span>/mo</span></div>
+                <div class="plan-sub">Unlimited workspaces · 300 pages/mo</div>
+                <ul class="plan-features">
+                    <li>Everything in Growth</li>
+                    <li>Multi-variant A/B scaffolding</li>
+                    <li>Conversion Intelligence Layer</li>
+                    <li>All 30+ CMS/DAM connectors</li>
+                    <li>Custom approval chains</li>
+                    <li>Premium SLA (99.9%)</li>
+                    <li>Dedicated CSM</li>
+                </ul>
+                <button class="btn-primary">Request Demo</button>
+            </div>
+            <div class="pricing-card">
+                <div class="plan-name">Enterprise</div>
+                <div class="plan-price">Custom</div>
+                <div class="plan-sub">Unlimited pages · Private cloud option</div>
+                <ul class="plan-features">
+                    <li>Everything in Scale</li>
+                    <li>Private LLM deployment</li>
+                    <li>HIPAA BAA available</li>
+                    <li>Custom AI model fine-tuning</li>
+                    <li>SLA up to 99.99%</li>
+                    <li>24/7 enterprise support</li>
+                    <li>Executive business reviews</li>
+                </ul>
+                <button class="btn-outline">Talk to Sales</button>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Submit</button>
+    <section id="demo" class="reveal">
+        <div class="section-label">Live Demo</div>
+        <h2>See the AI in action</h2>
+        <p>Prompt the assistant as you would in a real brief. Try: <em>"Create a GDPR-compliant landing page for our Q3 EMEA product launch targeting enterprise CFOs."</em></p>
+        <div class="demo-shell">
+            <div class="demo-log" id="chat-log">
+                <div class="demo-msg bot">Hello — I'm your SiteSprint AI co-pilot. Describe your campaign goal, audience, and any compliance requirements to get started.</div>
+            </div>
+            <div class="demo-controls">
+                <input type="text" id="chat-input" placeholder="Brief the AI…" autocomplete="off">
+                <button id="chat-send">Send</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="reveal">
+        <div class="section-label">Talk to Sales</div>
+        <h2>Book a personalised demo</h2>
+        <p>Our enterprise team will walk you through a live build using your brand assets and a real campaign brief.</p>
+        <form id="contact-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company" placeholder="Acme Corp" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Work Email</label>
+                    <input type="email" id="email" name="email" placeholder="jane@acmecorp.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="team-size">Team Size</label>
+                    <input type="text" id="team-size" name="team-size" placeholder="e.g. 200–500">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message">What's your primary use case?</label>
+                <textarea id="message" name="message" placeholder="e.g. Campaign landing pages for three regional brands, approx. 40 pages/month…" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Request Demo</button>
+            <div class="status" id="form-status"></div>
         </form>
     </section>
 </body>
