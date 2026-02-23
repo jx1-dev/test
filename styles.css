@@ -96,9 +96,12 @@ header {
         linear-gradient(170deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
 }
 
+/* ── Typography ── */
 h2 {
-    margin: 0 0 0.45rem;
-    font-size: clamp(1.4rem, 2.2vw, 2rem);
+    margin: 0 0 0.6rem;
+    font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
 }
 
 p {
@@ -106,23 +109,315 @@ p {
     color: var(--muted);
 }
 
+.gradient-text {
+    background: linear-gradient(100deg, var(--brand), var(--brand-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--brand);
+    margin-bottom: 0.6rem;
+}
+
+/* ── Nav badge ── */
+.nav-badge {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    background: linear-gradient(120deg, var(--brand), var(--brand-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ── Hero ── */
+header {
+    min-height: 360px;
+}
+
+.hero-eyebrow {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--brand);
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.trust-bar {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.75rem;
+}
+
+.trust-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    border: 1px solid rgba(192, 132, 252, 0.3);
+    color: var(--muted);
+    background: rgba(192, 132, 252, 0.07);
+}
+
+/* ── Stats ── */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    background: linear-gradient(120deg, var(--brand), var(--brand-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+}
+
+.stat-label {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.4rem;
+    line-height: 1.4;
+}
+
+/* ── Features ── */
 .features-grid {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
 }
 
 .feature {
-    padding: 1.25rem;
+    padding: 1.4rem;
     border-radius: 12px;
     border: 1px solid rgba(192, 132, 252, 0.2);
-    background: linear-gradient(140deg, rgba(124, 58, 237, 0.18), rgba(245, 158, 11, 0.06));
-    font-weight: 600;
+    background: linear-gradient(140deg, rgba(124, 58, 237, 0.14), rgba(245, 158, 11, 0.04));
+    transition: border-color 0.2s, transform 0.2s;
 }
 
-#pricing p {
-    font-size: 1.05rem;
+.feature:hover {
+    border-color: rgba(192, 132, 252, 0.45);
+    transform: translateY(-2px);
+}
+
+.feature-icon {
+    color: var(--brand);
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+}
+
+.feature-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+}
+
+.feature-desc {
+    font-size: 0.83rem;
+    color: var(--muted);
+    line-height: 1.55;
+}
+
+/* ── How It Works ── */
+.steps {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.step {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    padding: 1.25rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.step-num {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    background: linear-gradient(120deg, var(--brand), var(--brand-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    flex-shrink: 0;
+    line-height: 1;
+    padding-top: 2px;
+}
+
+.step-title {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.35rem;
+}
+
+.step-desc {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* ── Pricing ── */
+.pricing-grid {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    align-items: start;
+}
+
+.pricing-card {
+    padding: 1.5rem;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.02);
+    position: relative;
+}
+
+.pricing-featured {
+    border-color: rgba(192, 132, 252, 0.45);
+    background: linear-gradient(160deg, rgba(124, 58, 237, 0.18), rgba(245, 158, 11, 0.07));
+}
+
+.plan-badge {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--brand-2);
+    margin-bottom: 0.5rem;
+}
+
+.plan-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.plan-price {
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.3rem;
+}
+
+.plan-price span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--muted);
+}
+
+.plan-sub {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.plan-features {
+    list-style: none;
+    margin: 0 0 1.4rem;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.plan-features li {
+    font-size: 0.83rem;
+    color: var(--muted);
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.plan-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--success);
+    font-weight: 700;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+    background: linear-gradient(130deg, #7c3aed, var(--brand), var(--brand-2));
+    color: white;
+    border: 0;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    width: 100%;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-outline:hover {
+    border-color: var(--brand);
+    background: rgba(192, 132, 252, 0.08);
+}
+
+.btn-ghost {
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Contact form ── */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+}
+
+.form-group {
+    display: grid;
+    gap: 0.3rem;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--muted);
 }
 
 #demo .demo-shell {
@@ -197,12 +492,10 @@ form {
 }
 
 button {
-    background: linear-gradient(130deg, #7c3aed, var(--brand), var(--brand-2));
-    color: white;
-    border: 0;
-    font-weight: 700;
-    cursor: pointer;
-    letter-spacing: 0.02em;
+    font: inherit;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    padding: 0.7rem 0.85rem;
 }
 
 button:hover {
@@ -233,7 +526,13 @@ button:hover {
         flex-direction: column;
     }
 
-    .features-grid {
+    .features-grid,
+    .pricing-grid,
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
         grid-template-columns: 1fr;
     }
 
