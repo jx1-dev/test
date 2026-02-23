@@ -1,14 +1,14 @@
 :root {
-    --bg: #0b1020;
-    --surface: #111a33;
-    --surface-alt: #1a2750;
-    --text: #e7ecff;
-    --muted: #b6c0e5;
-    --brand: #6f8cff;
-    --brand-2: #53d8fb;
-    --success: #3ddc97;
-    --border: rgba(255, 255, 255, 0.12);
-    --shadow: 0 20px 45px rgba(7, 11, 24, 0.45);
+    --bg: #0a0a0f;
+    --surface: #13111a;
+    --surface-alt: #1e1a2e;
+    --text: #f0ede8;
+    --muted: #9d97b0;
+    --brand: #c084fc;
+    --brand-2: #f59e0b;
+    --success: #34d399;
+    --border: rgba(192, 132, 252, 0.15);
+    --shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
     --radius: 16px;
 }
 
@@ -25,8 +25,9 @@ body {
     font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
     color: var(--text);
     background:
-        radial-gradient(circle at 20% 0%, #253568 0%, transparent 45%),
-        radial-gradient(circle at 90% 10%, #14305a 0%, transparent 30%),
+        radial-gradient(ellipse at 15% 0%, rgba(124, 58, 237, 0.18) 0%, transparent 50%),
+        radial-gradient(ellipse at 85% 5%, rgba(245, 158, 11, 0.1) 0%, transparent 40%),
+        radial-gradient(ellipse at 50% 100%, rgba(192, 132, 252, 0.08) 0%, transparent 50%),
         var(--bg);
     line-height: 1.6;
 }
@@ -39,9 +40,9 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 4vw;
-    backdrop-filter: blur(8px);
-    background: rgba(11, 16, 32, 0.75);
-    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+    background: rgba(10, 10, 15, 0.8);
+    border-bottom: 1px solid rgba(192, 132, 252, 0.12);
 }
 
 nav h1 {
@@ -71,7 +72,7 @@ nav a {
 nav a:hover,
 nav a:focus-visible {
     color: var(--text);
-    background: rgba(111, 140, 255, 0.2);
+    background: rgba(192, 132, 252, 0.18);
 }
 
 header,
@@ -91,7 +92,7 @@ header {
     place-content: center;
     text-align: center;
     background:
-        linear-gradient(135deg, rgba(111, 140, 255, 0.24), rgba(83, 216, 251, 0.16)),
+        linear-gradient(135deg, rgba(124, 58, 237, 0.28), rgba(245, 158, 11, 0.12)),
         linear-gradient(170deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
 }
 
@@ -115,8 +116,8 @@ p {
 .feature {
     padding: 1.25rem;
     border-radius: 12px;
-    border: 1px solid var(--border);
-    background: linear-gradient(140deg, rgba(111, 140, 255, 0.16), rgba(83, 216, 251, 0.08));
+    border: 1px solid rgba(192, 132, 252, 0.2);
+    background: linear-gradient(140deg, rgba(124, 58, 237, 0.18), rgba(245, 158, 11, 0.06));
     font-weight: 600;
 }
 
@@ -150,7 +151,7 @@ p {
 
 .demo-msg.user {
     margin-left: auto;
-    background: rgba(111, 140, 255, 0.35);
+    background: rgba(124, 58, 237, 0.4);
 }
 
 .demo-msg.bot {
@@ -196,11 +197,12 @@ form {
 }
 
 button {
-    background: linear-gradient(130deg, var(--brand), var(--brand-2));
+    background: linear-gradient(130deg, #7c3aed, var(--brand), var(--brand-2));
     color: white;
     border: 0;
     font-weight: 700;
     cursor: pointer;
+    letter-spacing: 0.02em;
 }
 
 button:hover {
